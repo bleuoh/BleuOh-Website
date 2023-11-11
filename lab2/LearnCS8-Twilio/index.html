@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="2024 GR Supra">
+    <meta name="author" content="862336708">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Title of your Website -->
+    <title>2024 GR Supra</title>
+    <link href="product.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1">
+    <!-- Top Menu Bar -->
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-1" href="https://www.toyota.com/socal/deals-incentives/?&offers=cash&gad=1&gclid=CjwKCAjw7c2pBhAZEiwA88pOF1MLcriOr5l67By-Fcg_O65qqnzAZ85_mE6zDnHiw-zdqYlKAxxD0RoCC1YQAvD_BwE&gclsrc=aw.ds" target="_blank">Home</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-2" href="https://www.toyota.com/all-vehicles/" target="_blank">Vehicles</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-3" href="https://www.toyota.com/configurator/" target="_blank">Build Your Toyota</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-4" href="https://www.toyota.com/dealers/" target="_blank">Find a Dealer</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-5" href="https://account.toyota.com/" target="_blank">Account</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-6" href="https://www.toyota.com/brand/" target="_blank">About Us</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-7" href="https://www.toyota.com/support/contact-us/" target="_blank">Contact Us</a>
+    </div>
+    </nav>
+    <!-- Main Header Section h1-->
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-0 text-center bg-light">
+    <div class="col-md-8 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Preorder your 2024 GR Supra</h1>
+        <p class="lead font-weight-normal">The 2024 GR was designed to be a high-performance sports car with a inline-six engine that produces up to 380 horsepower and 365 lb-ft of torque, making it one of the most powerful cars of its time.</p>
+        <a class="btn btn-outline-secondary" href="https://www.toyota.com/grsupra/">Coming soon</a>
+    </div>
+</div>
+<!-- Left Tile -->
+<div class="d-md-flex flex-md-equal w-100">
+    <div class="bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+            <h2 class="display-5">Sign up</h2>
+            <p class="lead">Sign up now to get instant access to our educational content</p>
+        </div>
+        <!-- Web form when submitted will send a text message -->
+        <form class="p-2" onsubmit="sendTextMessage(); return false;">
+            <!-- Full Name Form Field -->
+            <div class="form-group">
+                <label for="example-first-name">Full Name</label>
+                <input type="text" value="Full Name" class="form-control" id="example-first-name" aria-describedby="emailHelp">
+            </div>
+            <!-- Phone Number Form Field -->
+            <div class="form-group">
+                <label for="example-tel-input">Phone number</label>
+                <input type="tel" class="form-control" value="1408555555" id="example-tel-input">
+            </div>
+            <!-- JavaScript that handles onSubmit logic -->
+            <!-- Configure the XHR request below with your own credentials -->
+            <script>
+            function sendTextMessage() {
+                console.log("Hello world!");
+                var xhr = new XMLHttpRequest();
+                var accountSID = "ACc301a3a3ef81912245faa94c05750081";
+                var authToken = "49c895e12b502960e9571cf2e044d89a";
+                var base64encoded = accountSID + ":" + authToken;
+                var params = "To=" + document.getElementById('example-tel-input').value + "&From=" + "18449122988" + "&Body=" + "Hello " + document.getElementById('example-first-name').value + " Are you interested in purchasing a 2024 GR Supra?"
+                xhr.open("POST", "https://api.twilio.com/2010-04-01/Accounts/" + accountSID + "/Messages.json", true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.setRequestHeader('Authorization', 'Basic ' + btoa(base64encoded));
+                xhr.send(params);
+            }
+            </script>
+            <!-- Submit button that will execute the sendTextMessage function -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- Right Tile -->
+    <div class="bg-light pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+            <h2 class="display-5">2024 GR Supra</h2>
+            <p class="lead">Starting MSRP $45,540</p>
+            <img class="mx-auto" src="picture.png" height="250px">
+        </div>
+        <div class="mx-auto" style="width: 80%; height: 100px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+</div>
+  </body>
+</html>
